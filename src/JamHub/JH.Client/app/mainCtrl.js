@@ -10,17 +10,7 @@
 
     function MainCtrl(userAccount, currentUser) {
         var vm = this;
-        vm.isLoggedIn = function () {
-            return currentUser.getProfile().isLoggedIn;
-        };
-        vm.message = '';
-        vm.userData = {
-            userName: '',
-            email: '',
-            password: '',
-            confirmPassword: ''
-        };
-
+        
         vm.registerUser = function () {
             vm.userData.confirmPassword = vm.userData.password;
 
