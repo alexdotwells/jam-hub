@@ -10,7 +10,17 @@
 
     function MainCtrl(userAccount, currentUser) {
         var vm = this;
-        
+        vm.isLoggedIn = function () {
+            return currentUser.getProfile().isLoggedIn;
+        };
+        vm.message = '';
+        vm.userData = {
+            userName: '',
+            email: '',
+            password: '',
+            confirmPassword: ''
+        };
+
         vm.registerUser = function () {
             vm.userData.confirmPassword = vm.userData.password;
 
@@ -35,6 +45,26 @@
                 });
         }
 
-        
+        vm.login = function () {
+            vm.userData.grant_type = "password";
+            vm.userData.userName = vm.userData.email;
+
+            userAccount.login.loginUser(vm.userData,
+                function (data) {
+                    vm.message = "";
+                    vm.password = "";
+                    currentUser.setProfile(vm.userData.userName, data.access_token);
+                },
+                function (response) {
+                    vm.password = "";
+                    vm.message = response.statusText + "\r\n";
+                    if (response.data.exceptionMessage)
+                        vm.message += response.data.exceptionMessage;
+
+                    if (response.data.error) {
+                        vm.message += response.data.error;
+                    }
+                });
+        }
     }
 })();
