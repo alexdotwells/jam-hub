@@ -85,6 +85,5 @@ D:\codez\NET\jam-hub\src\JamHub\JH.WebApi\bin\Microsoft.Owin.Security.Google.xml
 D:\codez\NET\jam-hub\src\JamHub\JH.WebApi\bin\Microsoft.Owin.Security.Twitter.xml
 D:\codez\NET\jam-hub\src\JamHub\JH.WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\codez\NET\jam-hub\src\JamHub\JH.WebApi\bin\System.Web.Http.Owin.xml
-D:\codez\NET\jam-hub\src\JamHub\JH.WebApi\obj\Debug\JH.WebApi.csprojResolveAssemblyReference.cache
 D:\codez\NET\jam-hub\src\JamHub\JH.WebApi\obj\Debug\JH.WebApi.dll
 D:\codez\NET\jam-hub\src\JamHub\JH.WebApi\obj\Debug\JH.WebApi.pdb
