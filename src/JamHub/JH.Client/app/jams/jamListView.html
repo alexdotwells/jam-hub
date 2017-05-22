@@ -1,0 +1,31 @@
+<div class="panel panel-primary"
+     ng-controller="JamListCtrl as vm">
+    <div class="panel-heading"
+         style="font-size:large">
+        Jam List
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <td>Jam</td>
+                    <td>Code</td>
+                    <td>Added</td>
+                    <td>Rating</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="jam in vm.jams">
+                    <td>{{ jam.jamName}}</td>
+                    <td>{{ jam.jamCode }}</td>
+                    <td>{{ jam.addedDate | date }}</td>
+                    <td>{{ jam.rating}}</td>
+                    <td>{{ jam.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
